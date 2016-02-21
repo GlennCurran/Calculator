@@ -23,29 +23,40 @@ int main() {
 
 while (looper = true) {
 cout << "Enter a number to begin operation" << endl;
-while (correctFlag == false ) {
+while (correctFlag == false) {
 
 
 cin >> noA;
 
 i = 0;
-    while (i < 17) {
+
+
+
+
+    while (i < 4) {
+
 
         if (noA == op[i]){
 
 
             correctFlag = false;
-            i = 17;
+
+
+            cout << "false" << endl;
 
                     } else {
 
             correctFlag = true;
+            cout << "true" << endl;
+            i = 6;
 
         };
 
         i++;
 
       };
+
+
 
 
       if (correctFlag = false) {
@@ -73,7 +84,7 @@ cin >> opin;
         if (opin =! op[i]){
 
               correctFlag = false;
-              i = 17;
+              i = 6;
 
                     } else {
 
@@ -151,4 +162,5 @@ cin >> noB;
 
 
 };
+
 
