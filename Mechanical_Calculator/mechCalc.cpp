@@ -6,8 +6,7 @@ using namespace std;
 
 
 char str[1024];
-char charList[17] = {
-
+char charList[] = {
   '!',
   '"',
   '£',
@@ -25,18 +24,23 @@ char charList[17] = {
    '`',
    '¬',
    '¬',
-// all non numeric chars neen to be added here
+// all non numeric chars need to be added here
 };
 
-char oplist[] = {
 
 
 
 
+
+char opList[] = {
+ '+',
+ '-',
+ '/',
+ '*',
 };
-int x;
+int x = 0;
 int i;
-bool correctFlag;
+bool correctFlag = false;
 int counter;
 
 
@@ -53,19 +57,22 @@ cout << "Enter a number to begin" <<endl;
 
     while (correctFlag == false) {
      cin >> str[x];
-     for (i = 0; i < 17; i++){
+     i = 0;
+     while (i < 17) {
+
            if (str[x] == charList[i]) {
 
                correctFlag = false;
+               i = 17;
 
 
            } else {
 
                correctFlag = true;
 
-
-
            };
+
+           i++;
 
          };
 
@@ -81,12 +88,16 @@ cout << "Enter a number to begin" <<endl;
 
       correctFlag = false;
 
+      i = 0;
+
       while (correctFlag == false) {
      cin >> str[x];
-     for (i = 0; i < 17; i++){
+     while (i < 17) {
+
            if (str[x] =! opList[i]) {
 
                correctFlag = false;
+               i = 17;
 
 
            } else {
@@ -95,6 +106,8 @@ cout << "Enter a number to begin" <<endl;
 
 
            };
+
+           i++;
 
          };
 
@@ -110,13 +123,12 @@ cout << "Enter a number to begin" <<endl;
 for (i = 0; i < counter; i++) {
 
 
+
 };
 
 
 
   };
-
-
 
 
 
