@@ -19,6 +19,13 @@ int main() {
 	cin >> n;
 	cout << "Please enter a second number" << endl;
 	cin >> num2;
+	if ( num1 > 9 or 0 > num1) {
+      n = 5;
+	};
+
+	if (num2 > 9 or 0 > num2) {
+      n = 5;
+	};
 	switch(n)
 	{
 		case 1:result=num1+num2;
