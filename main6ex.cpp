@@ -1,8 +1,8 @@
 #include <iostream>
 #include "stdlib.h"
-#include "string.h"
+#include <string>
 
-
+using namespace std;
     void restart();
     int result;
     bool isValid;
@@ -10,7 +10,15 @@
     int ConvertedNum1;
     int ConvertedNum2;
     int ConvertedN;
-using namespace std;
+
+    char num1;
+    char num2;
+    int num1int;
+    int num2int;
+    char n;
+    bool checkNum1, checkNum2;
+
+
 
 
 void incorrect() {
@@ -39,17 +47,18 @@ void restart()  {
 
   while (flag == true) {
 
-    char num1;
-    char num2;
-    char n;
-    bool checkNum1, checkNum2;
 
     cout <<"Enter First Number (0-9)" << endl;
     cout <<"------------------------------------" << endl;
-	cin >> num1;
+    cin >> num1;
 	system("cls");
 
-    cout <<"------------------------------------" << endl;
+	//if (num1.length() >= 2) {
+//ConvertedNum1 = (int)num1 - 48;
+        //incorrect();
+	//}
+
+    cout <<"------------------------------------" <<endl;
 	cout <<"Choose Operation (+ - * /)" << endl;
     cout <<"------------------------------------" << endl;
     cout << num1 << endl;
@@ -61,6 +70,7 @@ void restart()  {
 //};
 
 ConvertedN = (int)n;
+
 
 switch (ConvertedN) {
 
@@ -86,6 +96,18 @@ switch (ConvertedN) {
     cin >> num2;
 	system("cls");
 
+	//if (num2.length() >= 2) {
+
+        // incorrect();
+
+	//}
+	//int num1_length = num1.length();
+	//int num2_length = num2.length();
+
+
+	//int ConvertedNum1 = std::stoi (num1,nullptr,num1_length);
+	//int ConvertedNum2 = std::stoi (num2,nullptr,num1_length);
+
 
     ConvertedNum1 = (int)num1 - 48;
     ConvertedNum2 = (int)num2 - 48;
@@ -94,12 +116,11 @@ switch (ConvertedN) {
     cout <<"Result of Calculation" << endl;
     cout <<"------------------------------------" << endl;
 
-	switch(ConvertedN)
-	{
+	switch(ConvertedN) {
+
 		case 43:result=ConvertedNum1+ConvertedNum2;
 				cout << num1 << " " <<  n << " " << num2 << " = " << result << endl;
-				break;ConvertedNum1 = (int)num1 - 48;
-ConvertedNum2 = (int)num2 - 48;
+				break;
 		case 45:result=ConvertedNum1-ConvertedNum2;
 				cout << num1 << " " <<  n << " " << num2 << " = " << result << endl;
 				break;
